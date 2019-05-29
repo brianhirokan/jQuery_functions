@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>jQuery_functions</title>
+</head>
+<body>
+    <div class="container">
+        <div class="function_box">
+            <h1 class="title_hide_show">Hide/Show</h1>
+            <button class="hide_btn">HIDE</button>
+            <button class="show_btn">SHOW</button>
+            <p class="hide_show_function">Click the buttons to hide and show this paragraph</p>
+        </div>
+        <div class="function_box">
+            <h1 class="title_toggle">Toggle</h1>
+            <button class="toggle_btn">TOGGLE</button>
+            <p class="toggle_function">Click the button to use toggle function</p>
+        </div>
+        <div class="function_box">
+            <h1 class="title_slide_up_down">Slide Up/Down</h1>
+            <button class="slide_up_btn">SLIDE UP</button>
+            <button class="slide_down_btn">SLIDE DOWN</button>
+            <P class="slide_up_down_function">Click the buttons to slide up and slide down this paragraph</P>
+        </div>
+        <div class="function_box">
+            <h1 class="title_slide_toggle">Slide Toggle</h1>
+            <button class="slide_toggle_btn">SLIDE TOGGLE</button>
+            <P class="slide_toggle_function">Click the button to use slide toggle function</P>
+        </div>
+        <div class="function_box">
+            <h1 class="title_fade_in_out">Fade In/Out</h1>
+            <button class="fade_in_btn">FADE IN</button>
+            <button class="fade_out_btn">FADE OUT</button>
+            <div class="fade_div"></div>
+        </div>
+        <div class="function_box">
+            <h1 class="title_add_class">Add Class</h1>
+            <button class="add_class_btn">ADD CLASS</button>
+            <p class="add_class_function">Click the button to add class to this paragraph</p>
+        </div>
+        <div class="function_box">
+            <h1 class="title_before_after">Before/After</h1>
+            <button class="before_btn">BEFORE</button>
+            <button class="after_btn">AFTER</button>
+            <p class="before_after_function">Click the button to use before and after function</p>
+        </div>
+        <div class="function_box">
+            <h1 class="title_append">Append</h1>
+            <button class="append_btn">APPEND</button>
+            <p class="append_function">Click the button to insert content at the end of this paragraph</p>
+        </div>
+        <div class="function_box">
+            <h1 class="title_html">HTML</h1>
+            <button class="html_btn">HTML</button>
+            <p class="html_function">Click the button to set or return the content</p>
+        </div>
+        <div class="function_box">
+            <h1 class="title_attr">Attr</h1>
+            <button class="attr_btn">ATTR</button>
+            <img class="attr_img" src="content_icon3.png" alt="attr_img">
+        </div>
+        <div class="function_box">
+            <h1 class="title_val">Val</h1>
+            <button class="val_btn">Set the value of the input field</button>
+            <input class="val_input" type="text" name="user">
+        </div>
+        <div class="function_box">
+            <h1 class="title_text">Text</h1>
+            <button class="text_btn">TEXT</button>
+            <p>Set context for all p elements</p>
+        </div>
+    </div>                
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>    
+    <script>
+        
+        $('.hide_btn').click(function(){
+            $('.hide_show_function').hide();
+         });
+
+        $('.show_btn').click(function(){
+            $('.hide_show_function').show();
+        }); 
+
+        $('.toggle_btn').click(function(){
+            $('.toggle_function').toggle();
+        });
+
+        $('.slide_up_btn').click(function(){
+            $('.slide_up_down_function').slideUp("slow");
+        });
+
+        $('.slide_down_btn').click(function(){
+            $('.slide_up_down_function').slideDown("slow");
+        });
+
+        $('.slide_toggle_btn').click(function(){
+            $('.slide_toggle_function').slideToggle("slow");
+        });
+
+        $('.fade_in_btn').click(function(){
+            $('.fade_div').fadeIn(2000);
+        });
+
+        $('.fade_out_btn').click(function(){
+            $('.fade_div').fadeOut(2000);
+        });
+
+        $('.add_class_btn').click(function(){
+            $('.add_class_function').addClass("class");
+        });
+
+        $('.before_btn').click(function(){
+            $('.before_after_function').before("<span>BEFORE</span>");
+        })
+
+        $('.after_btn').click(function(){
+            $('.before_after_function').after("<span>BEFORE</span>");
+        });
+
+        $('.append_btn').click(function(){
+            $('.append_function').append("<span>APPEND</span>");
+        });
+
+        $('.html_btn').click(function(){
+            $('.html_function').html("HTML");
+        });
+
+        $('.attr_btn').click(function(){
+            $('.attr_img').attr("src", "content_icon4.png");
+        });
+
+        $('.val_btn').click(function(){
+            $('.val_input').val("Brian Kan");
+        });
+
+        $('.text_btn').click(function(){
+            $('p').text("FINISHED!!!!!!!!!!");
+        });
+    </script>
+</body>
+</html>
